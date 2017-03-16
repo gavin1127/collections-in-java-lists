@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -22,6 +24,14 @@ public class ListKatas {
      * @return An ArrayList of Integers, starting at 0 and continuing to n-1
      */
     // todo: create arrayListIndexes() method
+    public static ArrayList<Integer> arrayListIndexes(int n ){
+        ArrayList<Integer> list = new ArrayList<>();
+        int x;
+        for (x = 0; x < n; x++){
+            list.add(x);
+        }
+        return list;
+    }
 
     /**
      * Write a static method named sumList() that accepts an ArrayList of
@@ -33,6 +43,14 @@ public class ListKatas {
      * @return the sum of the provided List of Doubles
      */
     // todo: create sumList() method
+    public static double sumList(ArrayList<Double> numbers){
+        double sum = 0;
+        for(double number : numbers) {
+            sum+= number;
+        }
+        return sum;
+
+    }
 
     /**
      * Create a static method named concatenateStrings() that accepts an
@@ -44,6 +62,13 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+    public static String concatenateStrings(ArrayList<String> strings){
+        String cat = "";
+        for (int x=0; x < strings.size() ; x++){
+            cat = cat + strings.get(x);
+        }
+        return cat;
+    }
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
@@ -68,5 +93,12 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+    public static ArrayList<String> reverseListOfStrings(ArrayList<String> strings){
+        ArrayList<String> reverse = new ArrayList<String>();
+        for (int x = 0; x < strings.size(); x++){
+            reverse.add((String) strings.get(strings.size() - x - 1));
+        }
+        return reverse;
+    }
 
 }
